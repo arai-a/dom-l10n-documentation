@@ -24,4 +24,11 @@ In the example above, passing in `data-l10n-args='{"name:" "world"}'` would resu
 
 ## Limitations
 
-At this time, Fluent DOM is only able to accept numbers and strings as `data-l10n-args`. It technically also supports dates, since dates can be represented as a number, however there is an open bug ([Bug1611754](https://bugzilla.mozilla.org/show_bug.cgi?id=1611754)) to support dates in a more straightforward way.
+At this time, Fluent DOM is only able to accept the following types as `data-l10n-args` object's properties.
+
+  * numbers
+  * strings
+  * bool (converted to "true" or "false" string)
+  * null (treated as non-existent property)
+
+It technically also supports dates, since dates can be represented as a number, however there is an open bug ([Bug1611754](https://bugzilla.mozilla.org/show_bug.cgi?id=1611754)) to support dates in a more straightforward way.
